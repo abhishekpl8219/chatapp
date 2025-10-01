@@ -6,10 +6,17 @@ import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/users.routes.js";
 import connectToMongoDB from "./db/connectToMOngoDB.js";
 import Message from "./models/message.model.js";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 5000;
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Your frontend URL
+    credentials: true, // For cookies (since you're using generateTokenAndSetCookie)
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authRoutes);
