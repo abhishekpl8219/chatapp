@@ -7,8 +7,8 @@ This project includes authentication, authorization, global state management, an
 ---
 
 ## 🚀 Demo
-🔗 [Live Demo](#)  
-🎥 [Video Tutorial on YouTube](#)
+🔗 chatapp-sable-phi.vercel.app
+
 
 ---
 
